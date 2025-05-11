@@ -1,0 +1,18 @@
+.page {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.page a {
+    display: block;
+    margin: 5px;
+    padding: 0.5rem 1rem;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    font-size: 1.20rem;
+    color: #333;
+}
+
+.page a:hover {
+    background-color: #fafafa;
+}

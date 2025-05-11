@@ -1,0 +1,66 @@
+.cards {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 1;
+}
+
+.card {
+    flex: 1 1;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px #ddd;
+    font-size: 1.2rem;
+}
+
+.card hr {
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+.result {
+    flex: 1 1;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+.progress {
+    margin: 0.5rem;
+    color: #999;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: stretch;
+    align-items: stretch;
+    gap: 10px;
+}
+
+.buttons>button, .buttons>a {
+    flex: 1 1;
+    padding: 20px;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.buttons>button:enabled, .buttons>a {
+    border: 1px solid #999;
+    color: #666;
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.buttons>button:enabled:hover, .buttons>a:hover {
+    background-color: #ccc;
+}
+
+.buttons>button:disabled {
+    border: 1px solid #eee;
+    color: #999;
+    border-color: #ccc;
+    background-color: #fafafa;
+}
