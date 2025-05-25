@@ -1,4 +1,4 @@
-import Link from 'next/link'
+'use client'
 
 import styles from './page.module.css'
 
@@ -6,7 +6,7 @@ import styles from './page.module.css'
 export default function Page() {
     return (
         <main className={styles.page}>
-            <Link href="/perfectum">Perfectum</Link>
+            <p>Selecteer een optie uit het menu.</p>
         </main>
     )
 }

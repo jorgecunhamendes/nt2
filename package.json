@@ -4,10 +4,11 @@
     "license": "GPL-3.0-only",
     "private": true,
     "scripts": {
-        "dev": "next dev --turbopack",
+        "check": "tsc --noEmit",
+        "lint": "next lint",
+        "dev": "next dev",
         "build": "next build",
-        "start": "next start",
-        "lint": "next lint"
+        "start": "next start"
     },
     "dependencies": {
         "next": "15.3.2",
@@ -16,11 +17,13 @@
     },
     "devDependencies": {
         "@eslint/eslintrc": "^3",
+        "@material-symbols/svg-400": "^0.31.3",
+        "@svgr/webpack": "^8.1.0",
         "@types/node": "^22",
-        "@types/react-dom": "^19",
         "@types/react": "^19",
-        "eslint-config-next": "15.3.2",
+        "@types/react-dom": "^19",
         "eslint": "^9",
+        "eslint-config-next": "15.3.2",
         "typescript": "^5"
     }
 }

@@ -1,0 +1,52 @@
+.page {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.page p {
+    margin: 0.2rem 0 0.2rem 1ex;
+}
+
+.page h2 {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.table {
+    margin-top: 1rem;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.table>thead>tr {
+    border-bottom: 1px solid #999;
+}
+
+.table>thead>tr>th {
+    text-align: left;
+}
+
+.table>tbody>tr {
+    height: 24px;
+}
+
+.table>tbody>tr:nth-child(2n) {
+    background-color: #f3f3f3;
+}
+
+.table>tbody>tr svg {
+    width: 24px;
+    height: 24px;
+    vertical-align: bottom;
+}
+
+.table td {
+    padding: 1px 5px;
+}
+
+.colRegular {
+    display: flex;
+    flex-flow: row;
+    text-align: center;
+    padding: 0 10px !important;
+}

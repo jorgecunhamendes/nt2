@@ -1,0 +1,121 @@
+.topbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0.6rem 1ex;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 2px 0 #eee;
+    background-color: #fff;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    user-select: none;
+}
+
+.topbar a {
+    color: inherit;
+}
+
+.menuIcon {
+    margin: 0 10px 0 0;
+    height: 32px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 660px) {
+    .menuIcon {
+        display: none;
+    }
+}
+
+.layoutMiddle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(3.2rem + 1px);
+    bottom: 0;
+    width: auto;
+    height: auto;
+    min-height: calc(100dvh - 3.2rem - 1px);
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 1 1;
+}
+
+.sidebar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: auto;
+    z-index: 10;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    min-width: 300px;
+    padding: 0.6rem 0;
+    border-right: 1px solid #e0e0e0;
+    box-shadow: 2px 2px 2px 0 #eee;
+    background-color: #fff;
+}
+
+.sidebar a {
+    color: inherit;
+}
+
+@media screen and (max-width: 660px) {
+    .sidebar.hidden {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 660px) {
+    .sidebar {
+        position: initial !important;
+    }
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    min-width: 360px;
+    height: 100%;
+    overflow: auto;
+}
+
+.content>main {
+    margin: 1ex;
+    max-width: 660px;
+}
+
+
+.sidebarGroup {
+    display: flex;
+    flex-flow: column nowrap;
+    max-height: calc(100dvh - 2.7rem);
+}
+
+.sidebarGroup>h2 {
+    padding: 5px 0 5px 10px;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.sidebarGroup>a {
+    padding: 8px 5px 8px 20px;
+}
+
+.sidebarGroup>a:hover {
+    background-color: var(--secondary-color);
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: bottom;
+    margin: 0 1ex 0 0;
+}
