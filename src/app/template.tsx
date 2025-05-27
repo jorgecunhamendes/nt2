@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useState, type MouseEventHandler } from 'react'
 
 import { About, Menu, Quiz, ViewList, Xmark } from '@/lib/ui/icon'
+import nextConfig from '../../next.config'
 
 import style from './template.module.css'
 
@@ -13,7 +14,7 @@ const layoutThreshold = 660
 
 
 export default function App({ children }: { children: React.ReactNode }) {
-    const path = usePathname()
+    const path = `${nextConfig.basePath}${usePathname()}`
     const [sidebarHidden, setSidebarHidden] = useState(true)
     const onMenuToggle = () => {
         setSidebarHidden(!sidebarHidden)

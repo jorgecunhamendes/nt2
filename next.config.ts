@@ -1,7 +1,7 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-    basePath: "/nt2",
+    basePath: '/nt2',
     output: 'export',
     webpack(config) {
         const fileLoaderRule = config.module.rules.find((rule: { test: { test: (arg0: string) => unknown } }) =>
