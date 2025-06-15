@@ -102,7 +102,7 @@ export function CardsSession<A, B>({
                     }}
                     onIncorrectClick={verb => {
                         saveCardResult(storageKey, verb, false)
-                        dispatch({ type: 'nextCard' })
+                        dispatch([{ type: 'incorrect' }, { type: 'nextCard' }])
                     }}
                 />
             )
@@ -147,6 +147,8 @@ type SessionAction<A, B> = {
     type: 'flip',
 } | {
     type: 'nextCard',
+} | {
+    type: 'incorrect',
 }
 
 
@@ -200,6 +202,12 @@ function sessionStateReducer<A, B>(
                     cardIndex: done ? 0 : state.cardIndex + 1,
                     side: 'A',
                     page: done ? 'result' : state.page,
+                }
+            }
+            case 'incorrect': {
+                return {
+                    ...state,
+                    incorrect: state.incorrect + 1
                 }
             }
         }
